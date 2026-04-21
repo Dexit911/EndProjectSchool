@@ -1,0 +1,63 @@
+/* Smrtphonee */
+.hotbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: var(--dark-blue);
+    z-index: 1000;
+}
+
+body {
+    padding-bottom: 80px;
+}
+
+/* Computaa */
+@media (min-width: 900px) {
+    .hotbar {
+        top: 0;
+        left: 0;
+        bottom: auto;
+
+        width: 90px;
+        height: 100vh;
+        padding-top: 40px;
+
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .hotbar-item:last-child {
+        margin-top: auto;
+        padding-bottom: 30px;
+    }
+
+
+    body {
+        padding-bottom: 0;
+        padding-left: 90px;
+    }
+}
+
+
+.hotbar-item img {
+    width: 32px;
+    filter: invert(1);
+    transition: transform 0.1s ease;
+}
+
+.hotbar-item:hover img {
+    transform: scale(1.2);
+}
+
+.hotbar-item.active:hover img {
+    transform: scale(1.2);
+}

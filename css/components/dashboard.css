@@ -1,0 +1,205 @@
+:root {
+    /* Going to be moved to token css file */
+    --text: #111111;
+    --muted: #777777;
+    --accent: #d8a15d;
+    --accent-dark: #2d1d12;
+    --radius: 24px;
+
+    --blue: #103ce8;
+    --white: #edeef2;
+    --dark-gray: #3b3c3d;
+    --dark-blue: #0b1333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.action-buttons,
+.tokens-header,
+.vault-top,
+.token-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.balance-section,
+.action-buttons,
+.vault-card,
+.tokens-header {
+    margin-bottom: 24px;
+}
+
+.box {
+    background: var(--white);
+    border-radius: var(--radius);
+}
+
+.small-box {
+    width: 52px;
+    height: 52px;
+}
+
+.wallet-switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+}
+
+.icon-square,
+.token-square {
+    width: 36px;
+    height: 36px;
+    background: #d9d9d9;
+    border-radius: 10px;
+}
+
+.token-square {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.token-square.small {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.balance-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.balance-label {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: var(--muted);
+}
+
+.balance-section h1 {
+    margin: 0;
+    color: var(--white);
+    font-size: 52px;
+}
+
+.action-btn {
+    flex: 1;
+    border: none;
+    border-radius: 999px;
+    padding: 18px;
+    background: var(--blue);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.vault-card {
+    padding: 20px;
+    background: var(--dark-blue);
+    color: var(--blue);
+}
+
+.vault-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.vault-left h2,
+.vault-right h3,
+.tokens-header h2,
+.token-left h3,
+.token-right h3 {
+    margin: 0;
+}
+
+.vault-left p,
+.vault-right p,
+.token-left p,
+.token-right p {
+    margin: 6px 0 0;
+    color: #cfcfcf;
+}
+
+.vault-right {
+    text-align: right;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+.participate-btn {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 999px;
+    padding: 18px;
+    background: var(--blue);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tokens-header h2 {
+    font-size: 28px;
+    color: var(--white);
+}
+
+.tokens-list {
+    padding: 8px 0;
+}
+
+.token-row {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--dark-gray);
+}
+
+.token-row:last-child {
+    border-bottom: none;
+}
+
+.token-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.token-right {
+    text-align: right;
+}
+
+@media (min-width: 900px) {
+
+    .dashboard {
+        max-width: 1100px;
+        padding: 40px;
+    }
+
+    .balance-section h1 {
+        font-size: 64px;
+    }
+
+    .tokens-list {
+        padding: 20px 0;
+    }
+}
